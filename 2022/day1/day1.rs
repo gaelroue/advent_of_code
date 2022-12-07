@@ -1,13 +1,13 @@
 use std::fs;
 
-fn part1() -> std::io::Result<()> {
+fn part_one() -> std::io::Result<()> {
     let input = fs::read_to_string("input.txt")?;
     let max = input.split("\n\n").map(|x| x.lines().map(|x| x.parse::<u32>().unwrap()).sum::<u32>()).max().unwrap();
     println!("The Elf with the most calories carry {} calories.", max);  
     Ok(())
 }
 
-fn part2() -> std::io::Result<()> {
+fn part_two() -> std::io::Result<()> {
     let input = fs::read_to_string("input.txt")?;
 
     let mut calories = input.split("\n\n").map(|x| x.lines().map(|x| x.parse::<u32>().unwrap()).sum::<u32>()).collect::<Vec<u32>>();
@@ -19,7 +19,7 @@ fn part2() -> std::io::Result<()> {
 }
 
 fn main() -> std::io::Result<()> {
-    part1()?;
-    part2()?;
+    part_one()?;
+    part_two()?;
     Ok(())
 }

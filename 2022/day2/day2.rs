@@ -14,7 +14,7 @@ fn get_shape(strat: i32, opponent : i32) -> i32 {
     else { return (opponent + 1).rem_euclid(3);}
 }
 
-fn part1() -> std::io::Result<()> {
+fn part_one() -> std::io::Result<()> {
     let input = fs::read_to_string("input.txt")?;
 
     let result : i32 = input.lines().map(|line| {
@@ -29,7 +29,7 @@ fn part1() -> std::io::Result<()> {
     Ok(())
 }
 
-fn part2() -> std::io::Result<()> {
+fn part_two() -> std::io::Result<()> {
     let input = fs::read_to_string("input.txt")?;
 
     let result : i32 = input.lines().map(|line| {
@@ -46,7 +46,7 @@ fn part2() -> std::io::Result<()> {
 }
 
 fn main() -> std::io::Result<()> {
-    part1()?;
-    part2()?;
+    part_one()?;
+    part_two()?;
     Ok(())
 }
